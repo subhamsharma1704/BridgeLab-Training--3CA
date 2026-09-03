@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Personal Portfolio</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #f2f2f2;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 40px;
+            background: #222;
+            color: white;
+        }
+
+        nav {
+            display: flex;
+            gap: 25px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+        }
+
+        main {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 50px;
+            min-height: 70vh;
+            padding: 40px;
+        }
+
+        .about,
+        .image-section {
+            flex: 1;
+            text-align: center;
+        }
+
+        .image-section img {
+            width: 300px;
+            max-width: 100%;
+            border-radius: 10px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: #222;
+            color: white;
+        }
+
+        @media (max-width: 700px) {
+            header,
+            main {
+                flex-direction: column;
+            }
+
+            nav {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>Shubham Sharma</h1>
+
+        <nav>
+            <a href="#">Home</a>
+            <a href="#">About</a>
+            <a href="#">Skills</a>
+            <a href="#">Contact</a>
+        </nav>
+    </header>
+
+    <main>
+
+        <section class="about">
+            <h2>About Me</h2>
+            <p>
+                Hello! I am Shubham Sharma, a Computer Science student.
+                I am interested in web development and technology.
+            </p>
+        </section>
+
+        <section class="image-section">
+            <img src="https://via.placeholder.com/300"
+                 alt="Profile Image">
+        </section>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Shubham Sharma. All Rights Reserved.</p>
+    </footer>
+
+</body>
+</html>

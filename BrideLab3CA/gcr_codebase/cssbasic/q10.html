@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Complete Webpage</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial;
+            background: #eee;
+        }
+
+        header {
+            position: sticky;
+            top: 0;
+            padding: 15px;
+            background: #222;
+            color: white;
+            z-index: 10;
+        }
+
+        nav a {
+            color: white;
+            margin: 15px;
+        }
+
+        .hero {
+            height: 400px;
+            background: linear-gradient(rgba(0,0,0,.5), rgba(0,0,0,.5)),
+                        url("https://picsum.photos/1200/500");
+            background-size: cover;
+            position: relative;
+        }
+
+        .hero h1 {
+            position: absolute;
+            top: 40%;
+            width: 100%;
+            text-align: center;
+            color: white;
+            font-size: 40px;
+        }
+
+        section {
+            padding: 50px;
+            margin: 20px;
+            border: 2px solid #333;
+            outline: 2px solid #aaa;
+        }
+
+        .about {
+            display: flex;
+            gap: 30px;
+            background: rgba(255,255,255,.8);
+        }
+
+        .about div {
+            flex: 1;
+        }
+
+        .about img {
+            width: 100%;
+        }
+
+        .services {
+            display: flex;
+            gap: 20px;
+        }
+
+        .box {
+            flex: 1;
+            padding: 30px;
+            background: linear-gradient(135deg, #ddd, #fff);
+            border: 2px solid #555;
+            margin: 10px;
+            position: relative;
+        }
+
+        form {
+            max-width: 400px;
+            margin: auto;
+            position: relative;
+        }
+
+        input, textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #555;
+        }
+
+        footer {
+            padding: 20px;
+            text-align: center;
+            background: #222;
+            color: white;
+        }
+
+        @media (max-width: 600px) {
+            .about, .services {
+                flex-direction: column;
+            }
+
+            section {
+                padding: 25px;
+                margin: 10px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#services">Services</a>
+        <a href="#contact">Contact</a>
+    </nav>
+</header>
+
+<div class="hero" id="home">
+    <h1>Welcome to My Website</h1>
+</div>
+
+<section class="about" id="about">
+    <div>
+        <h2>About Us</h2>
+        <p>We create simple and modern digital solutions for everyone.</p>
+    </div>
+    <div>
+        <img src="https://picsum.photos/500/300">
+    </div>
+</section>
+
+<section id="services">
+    <h2>Services</h2>
+
+    <div class="services">
+        <div class="box">
+            <h3>Web Design</h3>
+            <p>Modern and responsive websites.</p>
+        </div>
+
+        <div class="box">
+            <h3>Development</h3>
+            <p>Fast and reliable applications.</p>
+        </div>
+
+        <div class="box">
+            <h3>Cloud</h3>
+            <p>Scalable cloud solutions.</p>
+        </div>
+    </div>
+</section>
+
+<section id="contact">
+    <h2>Contact</h2>
+
+    <form>
+        <input type="text" placeholder="Name">
+        <input type="email" placeholder="Email">
+        <textarea placeholder="Message"></textarea>
+        <input type="submit" value="Send">
+    </form>
+</section>
+
+<footer>
+    <p>&copy; 2026 My Website</p>
+</footer>
+
+</body>
+</html>

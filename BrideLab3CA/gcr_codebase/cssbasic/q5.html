@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Pricing Plans</title>
+
+    <style>
+        .plans {
+            display: flex;
+        }
+
+        .plan {
+            flex: 1;
+            height: 250px;
+            margin: 15px;
+            padding: 20px;
+            border: 2px solid black;
+            text-align: center;
+            transition: 0.3s;
+        }
+
+        .plan:hover {
+            transform: scale(1.05);
+            background-color: lightblue;
+        }
+
+        .popular {
+            border: 3px solid red;
+        }
+
+        a {
+            display: inline-block;
+            padding: 10px;
+            background-color: black;
+            color: white;
+            text-decoration: none;
+        }
+    </style>
+</head>
+
+<body>
+
+<h1>Pricing Plans</h1>
+
+<div class="plans">
+
+    <div class="plan">
+        <h2>Basic</h2>
+        <ul>
+            <li>1 User</li>
+            <li>5 GB Storage</li>
+            <li>Email Support</li>
+        </ul>
+        <h3>$10/month</h3>
+        <a href="#">Choose Plan</a>
+    </div>
+
+    <div class="plan popular">
+        <h2>Standard</h2>
+        <ul>
+            <li>5 Users</li>
+            <li>50 GB Storage</li>
+            <li>Priority Support</li>
+        </ul>
+        <h3>$20/month</h3>
+        <a href="#">Choose Plan</a>
+    </div>
+
+    <div class="plan">
+        <h2>Premium</h2>
+        <ul>
+            <li>Unlimited Users</li>
+            <li>100 GB Storage</li>
+            <li>24/7 Support</li>
+        </ul>
+        <h3>$30/month</h3>
+        <a href="#">Choose Plan</a>
+    </div>
+
+</div>
+
+</body>
+</html>

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dashboard</title>
+
+    <style>
+        body {
+            margin: 0;
+        }
+
+        header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            padding: 15px;
+            background-color: #222;
+            color: white;
+        }
+
+        .dashboard {
+            display: flex;
+            padding-top: 70px;
+        }
+
+        aside {
+            width: 200px;
+            min-height: calc(100vh - 70px);
+            background-color: #ddd;
+            padding: 20px;
+        }
+
+        aside a {
+            display: block;
+            margin: 15px;
+        }
+
+        main {
+            flex: 1;
+            display: flex;
+            gap: 20px;
+            padding: 20px;
+        }
+
+        .box {
+            flex: 1;
+            padding: 30px;
+            box-shadow: 0 2px 8px gray;
+        }
+
+        @media (max-width: 600px) {
+            .dashboard {
+                flex-direction: column;
+            }
+
+            aside {
+                width: auto;
+                min-height: auto;
+            }
+
+            main {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h2>Dashboard</h2>
+</header>
+
+<div class="dashboard">
+
+    <aside>
+        <a href="#">Home</a>
+        <a href="#">Profile</a>
+        <a href="#">Settings</a>
+    </aside>
+
+    <main>
+        <div class="box">
+            <h2>Box 1</h2>
+            <p>Welcome to the dashboard.</p>
+        </div>
+
+        <div class="box">
+            <h2>Box 2</h2>
+            <p>Here is some content.</p>
+        </div>
+    </main>
+
+</div>
+
+</body>
+</html>
