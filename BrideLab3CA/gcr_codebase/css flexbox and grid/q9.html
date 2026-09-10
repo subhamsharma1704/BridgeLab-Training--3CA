@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Card Flip Animation</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+
+            min-height: 100vh;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            background: #eee;
+        }
+
+        .scene {
+            width: 300px;
+            height: 350px;
+
+            perspective: 1000px;
+        }
+
+        .card {
+            width: 100%;
+            height: 100%;
+
+            position: relative;
+
+            transform-style: preserve-3d;
+
+            transition: transform 0.7s;
+        }
+
+        .scene:hover .card {
+            transform: rotateY(180deg);
+        }
+
+        .front,
+        .back {
+            position: absolute;
+
+            width: 100%;
+            height: 100%;
+
+            backface-visibility: hidden;
+
+            border-radius: 10px;
+
+            overflow: hidden;
+
+            text-align: center;
+
+            background: white;
+
+            box-shadow: 0 5px 15px #aaa;
+        }
+
+        .front img {
+            width: 100%;
+            height: 220px;
+
+            object-fit: cover;
+        }
+
+        .back {
+            padding: 30px;
+
+            display: flex;
+
+            flex-direction: column;
+
+            justify-content: center;
+
+            transform: rotateY(180deg);
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="scene">
+
+        <div class="card">
+
+            <div class="front">
+
+                <img src="https://picsum.photos/300/200"
+                     alt="Nature">
+
+                <h2>Nature</h2>
+
+            </div>
+
+            <div class="back">
+
+                <h2>About Nature</h2>
+
+                <p>
+                    Nature includes forests, mountains, rivers,
+                    animals and beautiful landscapes.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</body>
+</html>

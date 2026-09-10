@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Responsive Website</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+
+            font-family: Arial, sans-serif;
+        }
+
+        .page {
+            min-height: 100vh;
+
+            display: flex;
+            flex-direction: column;
+        }
+
+        header {
+            display: flex;
+
+            justify-content: space-between;
+            align-items: center;
+
+            padding: 20px 40px;
+
+            background: #222;
+            color: white;
+        }
+
+        .logo {
+            font-size: 25px;
+            font-weight: bold;
+        }
+
+        nav {
+            display: flex;
+            gap: 25px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+        }
+
+        main {
+            flex: 1;
+
+            display: grid;
+
+            grid-template-columns: 2fr 1fr;
+
+            gap: 30px;
+
+            padding: 40px;
+        }
+
+        .title {
+            animation: moveUp 1s ease;
+        }
+
+        .article-boxes {
+            display: flex;
+
+            gap: 20px;
+        }
+
+        .article-boxes div {
+            flex: 1;
+
+            padding: 25px;
+
+            background: #eee;
+
+            border-radius: 10px;
+        }
+
+        aside {
+            padding: 25px;
+
+            background: #f2f2f2;
+
+            border-radius: 10px;
+        }
+
+        footer {
+            width: 100%;
+
+            padding: 20px;
+
+            text-align: center;
+
+            background: #222;
+            color: white;
+        }
+
+        @keyframes moveUp {
+
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+
+        }
+
+        @media (max-width: 700px) {
+
+            header {
+                flex-direction: column;
+                gap: 20px;
+            }
+
+            nav {
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            main {
+                grid-template-columns: 1fr;
+            }
+
+            .article-boxes {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="page">
+
+    <header>
+
+        <div class="logo">
+            MyWebsite
+        </div>
+
+        <nav>
+            <a href="#">Home</a>
+            <a href="#">About</a>
+            <a href="#">Services</a>
+            <a href="#">Contact</a>
+        </nav>
+
+    </header>
+
+    <main>
+
+        <article>
+
+            <h1 class="title">
+                Welcome to My Website
+            </h1>
+
+            <div class="article-boxes">
+
+                <div>
+                    <h2>HTML</h2>
+                    <p>
+                        HTML creates the structure of webpages.
+                    </p>
+                </div>
+
+                <div>
+                    <h2>CSS</h2>
+                    <p>
+                        CSS is used to design webpages.
+                    </p>
+                </div>
+
+                <div>
+                    <h2>Responsive</h2>
+                    <p>
+                        Responsive design works on all devices.
+                    </p>
+                </div>
+
+            </div>
+
+        </article>
+
+        <aside>
+
+            <h2>Sidebar</h2>
+
+            <p>Latest News</p>
+            <p>Popular Posts</p>
+            <p>Useful Links</p>
+
+        </aside>
+
+    </main>
+
+    <footer>
+        <p>
+            &copy; 2026 MyWebsite. All Rights Reserved.
+        </p>
+    </footer>
+
+</div>
+
+</body>
+</html>
