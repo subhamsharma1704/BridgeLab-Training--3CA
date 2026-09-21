@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pseudo Classes</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial;
+            background: #f2f2f2;
+            text-align: center;
+            margin: 0;
+            padding: 30px;
+        }
+
+        .container {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .box {
+            width: 200px;
+            min-height: 180px;
+            padding: 20px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 3px 10px gray;
+        }
+
+        /* :hover */
+        .hover:hover {
+            background: lightblue;
+            color: blue;
+        }
+
+        /* :focus */
+        input:focus {
+            outline: 3px solid orange;
+        }
+
+        /* :active */
+        button:active {
+            background: red;
+            color: white;
+        }
+
+        /* :nth-child() */
+        li:nth-child(2) {
+            background: lightgreen;
+        }
+
+        a {
+            color: blue;
+        }
+
+        button,
+        input {
+            padding: 10px;
+            margin: 10px;
+        }
+
+        li {
+            padding: 8px;
+            list-style: none;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>CSS Pseudo-Classes</h1>
+    </header>
+
+    <main class="container">
+
+        <section class="box hover">
+            <h2>:hover</h2>
+            <p>Move the mouse over this box.</p>
+        </section>
+
+        <section class="box">
+            <h2>:focus</h2>
+            <input type="text" placeholder="Click here">
+            <p>Input changes when focused.</p>
+        </section>
+
+        <section class="box">
+            <h2>:active</h2>
+            <button>Click Me</button>
+            <p>Button changes while clicking.</p>
+        </section>
+
+        <section class="box">
+            <h2>:nth-child()</h2>
+            <ul>
+                <li>Item 1</li>
+                <li>Item 2</li>
+                <li>Item 3</li>
+            </ul>
+        </section>
+
+    </main>
+
+</body>
+</html>

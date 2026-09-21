@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Navigation Bar</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial;
+            text-align: center;
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            background: #222;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 18px 25px;
+            border: 1px solid #444;
+            transition: all 0.3s ease;
+        }
+
+        nav a:hover {
+            background: white;
+            color: #222;
+        }
+
+        nav .active {
+            background: steelblue;
+            border-bottom: 4px solid orange;
+        }
+
+        main {
+            min-height: 70vh;
+            padding: 80px 20px;
+        }
+
+        footer {
+            background: #222;
+            color: white;
+            padding: 15px;
+        }
+
+        /* Stack navbar below 700px */
+        @media (max-width: 700px) {
+            nav {
+                flex-direction: column;
+            }
+
+            nav a {
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+
+        <nav>
+            <a href="#" class="active">Home</a>
+            <a href="#">About</a>
+            <a href="#">Services</a>
+            <a href="#">Projects</a>
+            <a href="#">Contact</a>
+        </nav>
+
+    </header>
+
+    <main>
+
+        <h1>Welcome to My Website</h1>
+        <p>Navigation Bar with CSS Transitions</p>
+
+    </main>
+
+    <footer>
+        <p>© 2026 My Website</p>
+    </footer>
+
+</body>
+</html>

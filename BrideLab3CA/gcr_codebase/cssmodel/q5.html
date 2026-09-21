@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Advanced CSS Selectors</title>
+
+    <style>
+        body {
+            font-family: Arial;
+            text-align: center;
+            background: #f2f2f2;
+            padding: 30px;
+        }
+
+        input {
+            padding: 10px;
+            margin: 10px;
+        }
+
+        /* Attribute selector */
+        input[type="text"] {
+            border: 3px solid blue;
+        }
+
+        /* Attribute selector starting with https */
+        a[href^="https"] {
+            color: green;
+        }
+
+        a {
+            margin: 15px;
+        }
+
+        /* Hover pseudo-class */
+        a:hover {
+            color: red;
+        }
+
+        /* Focus pseudo-class */
+        input:focus {
+            outline: 3px solid orange;
+        }
+
+        /* nth-child pseudo-class */
+        li:nth-child(2) {
+            color: blue;
+        }
+
+        /* Before pseudo-element */
+        h1::before {
+            content: "★ ";
+        }
+
+        /* After pseudo-element */
+        h1::after {
+            content: " ★";
+        }
+
+        .parent {
+            margin: 30px;
+        }
+
+        /* Child combinator > */
+        .parent > p {
+            background: lightblue;
+        }
+
+        /* Adjacent sibling + */
+        p + p {
+            color: red;
+        }
+
+        /* General sibling ~ */
+        p ~ span {
+            font-weight: bold;
+        }
+
+        /* Descendant selector */
+        .parent p {
+            padding: 5px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Advanced CSS Selectors</h1>
+
+    <main>
+
+        <input type="text" placeholder="Enter name">
+        <input type="email" placeholder="Enter email">
+
+        <nav>
+            <a href="https://google.com">Google</a>
+            <a href="https://github.com">GitHub</a>
+            <a href="example.com">Example</a>
+        </nav>
+
+        <h2>Subjects</h2>
+
+        <ul>
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>Java</li>
+            <li>Python</li>
+        </ul>
+
+        <div class="parent">
+            <p>First paragraph</p>
+            <p>Second paragraph</p>
+            <span>Span element</span>
+        </div>
+
+    </main>
+
+</body>
+</html>

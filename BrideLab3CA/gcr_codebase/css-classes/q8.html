@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Box Sizing</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial;
+            background: #f2f2f2;
+            text-align: center;
+            padding: 40px;
+        }
+
+        .container {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            flex-wrap: wrap;
+            margin-top: 50px;
+        }
+
+        .box {
+            width: 300px;
+            padding: 40px;
+            border: 10px solid black;
+        }
+
+        .default {
+            box-sizing: content-box;
+            background: lightcoral;
+        }
+
+        .borderbox {
+            box-sizing: border-box;
+            background: lightgreen;
+        }
+
+        p {
+            line-height: 1.6;
+        }
+
+        @media (max-width: 700px) {
+            .box {
+                width: 90%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>Box-Sizing Comparison</h1>
+    </header>
+
+    <main class="container">
+
+        <section class="box default">
+            <h2>Default</h2>
+            <p>
+                Content-box adds padding and border
+                outside the given width.
+            </p>
+        </section>
+
+        <section class="box borderbox">
+            <h2>Border-box</h2>
+            <p>
+                Border-box includes padding and border
+                inside the given width.
+            </p>
+        </section>
+
+    </main>
+
+</body>
+</html>

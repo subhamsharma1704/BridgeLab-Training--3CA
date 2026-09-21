@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Shadows and Depth</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial;
+            background: #f2f2f2;
+            text-align: center;
+            margin: 0;
+            padding: 30px;
+        }
+
+        h1 {
+            text-shadow: 3px 3px 5px gray;
+        }
+
+        .cards {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin-top: 70px;
+            flex-wrap: wrap;
+        }
+
+        .card {
+            width: 220px;
+            padding: 40px 20px;
+            background: white;
+            border-radius: 12px;
+            transition: all 0.4s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-15px);
+            box-shadow: 0 15px 30px gray;
+        }
+
+        .card1 {
+            box-shadow: 5px 5px 10px gray;
+        }
+
+        .card2 {
+            box-shadow: 0 0 15px gray;
+        }
+
+        .card3 {
+            box-shadow: 10px 10px 0 lightgray;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Profile Cards</h1>
+
+    <main class="cards">
+
+        <article class="card card1">
+            <h2>Student</h2>
+            <p>Learning Web Development</p>
+        </article>
+
+        <article class="card card2">
+            <h2>Developer</h2>
+            <p>Building useful websites</p>
+        </article>
+
+        <article class="card card3">
+            <h2>Designer</h2>
+            <p>Creating beautiful layouts</p>
+        </article>
+
+    </main>
+
+</body>
+</html>

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UI Components</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial;
+            background: linear-gradient(135deg, #dbeafe, #e9d5ff);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .card {
+            width: 450px;
+            padding: 35px;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 8px 25px gray;
+            display: flex;
+            flex-direction: column;
+            gap: 18px;
+        }
+
+        input,
+        select,
+        button {
+            padding: 13px;
+            border-radius: 8px;
+            font-size: 16px;
+        }
+
+        input,
+        select {
+            border: 1px solid gray;
+        }
+
+        input:focus,
+        select:focus {
+            outline: 3px solid lightblue;
+        }
+
+        button {
+            border: none;
+            background: steelblue;
+            color: white;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        button:hover {
+            background: #222;
+        }
+    </style>
+</head>
+
+<body>
+
+    <main class="card">
+
+        <h1>Simple User Interface</h1>
+
+        <input type="search" placeholder="Search here">
+
+        <select>
+            <option>Select Category</option>
+            <option>Books</option>
+            <option>Movies</option>
+            <option>Games</option>
+        </select>
+
+        <button>Search</button>
+        <button>View Details</button>
+
+    </main>
+
+</body>
+</html>

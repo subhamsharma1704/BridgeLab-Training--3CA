@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Outline and Focus Form</title>
+
+    <style>
+        body {
+            font-family: Arial;
+            background: #f2f2f2;
+        }
+
+        main {
+            width: 400px;
+            margin: 50px auto;
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px gray;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        input,
+        textarea {
+            padding: 12px;
+            border: 1px solid gray;
+            border-radius: 6px;
+        }
+
+        input:focus {
+            outline: 3px solid blue;
+            outline-offset: 3px;
+        }
+
+        textarea:focus {
+            outline: 3px dashed green;
+            outline-offset: 4px;
+        }
+
+        button {
+            padding: 12px;
+            border: none;
+            border-radius: 6px;
+            background: #222;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+
+    <main>
+
+        <h1>Contact Form</h1>
+
+        <form>
+
+            <label>Name</label>
+            <input type="text" placeholder="Enter your name">
+
+            <label>Email</label>
+            <input type="email" placeholder="Enter your email">
+
+            <label>Message</label>
+            <textarea placeholder="Enter your message"></textarea>
+
+            <button type="submit">Submit</button>
+
+        </form>
+
+    </main>
+
+</body>
+</html>

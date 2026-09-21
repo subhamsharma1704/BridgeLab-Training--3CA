@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Box Model</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial;
+            text-align: center;
+            background: #f5f5f5;
+        }
+
+        .margin {
+            background: lightgreen;
+            padding: 40px;
+            width: 400px;
+            margin: 40px auto;
+        }
+
+        .border {
+            background: orange;
+            border: 10px solid red;
+            padding: 30px;
+        }
+
+        .padding {
+            background: lightblue;
+            padding: 30px;
+        }
+
+        .content {
+            background: white;
+            padding: 30px;
+            font-weight: bold;
+        }
+
+        .comparison {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            flex-wrap: wrap;
+        }
+
+        .default,
+        .borderbox {
+            width: 200px;
+            padding: 30px;
+            border: 10px solid black;
+        }
+
+        .default {
+            box-sizing: content-box;
+            background: lightcoral;
+        }
+
+        .borderbox {
+            box-sizing: border-box;
+            background: lightgreen;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>CSS Box Model</h1>
+
+    <main>
+
+        <div class="margin">
+            Margin
+
+            <div class="border">
+                Border
+
+                <div class="padding">
+                    Padding
+
+                    <div class="content">
+                        Content
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <section class="comparison">
+
+            <div class="default">
+                Default Box
+            </div>
+
+            <div class="borderbox">
+                Border Box
+            </div>
+
+        </section>
+
+    </main>
+
+</body>
+</html>

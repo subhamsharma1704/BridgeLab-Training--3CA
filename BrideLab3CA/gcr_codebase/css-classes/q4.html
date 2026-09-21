@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Selectors</title>
+
+    <style>
+        /* Element selector */
+        p {
+            font-size: 18px;
+        }
+
+        /* Class selector */
+        .highlight {
+            color: blue;
+            background: lightblue;
+        }
+
+        /* ID selector */
+        #special {
+            color: red;
+            font-weight: bold;
+        }
+
+        /* Attribute selector */
+        a[href] {
+            color: green;
+        }
+
+        /* Child combinator > */
+        .box > p {
+            background: lightyellow;
+        }
+
+        /* Adjacent sibling + */
+        h2 + p {
+            color: purple;
+        }
+
+        /* General sibling ~ */
+        h2 ~ ul {
+            border: 2px solid orange;
+        }
+
+        /* Descendant selector */
+        .box p {
+            padding: 8px;
+        }
+
+        body {
+            font-family: Arial;
+            background: #f2f2f2;
+            padding: 30px;
+        }
+
+        .box {
+            max-width: 600px;
+            margin: 30px auto;
+            padding: 25px;
+            background: white;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 40px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>CSS Selectors Practice</h1>
+    </header>
+
+    <main>
+
+        <section class="box">
+
+            <h2>Selectors Example</h2>
+
+            <p>This is an element selector.</p>
+
+            <p class="highlight">
+                This uses a class selector.
+            </p>
+
+            <p id="special">
+                This uses an ID selector.
+            </p>
+
+            <a href="https://google.com">Google Link</a>
+
+            <ul>
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>Java</li>
+            </ul>
+
+        </section>
+
+    </main>
+
+    <footer>
+        CSS Selectors Practice
+    </footer>
+
+</body>
+</html>
